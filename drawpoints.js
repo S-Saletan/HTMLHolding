@@ -14,7 +14,7 @@ svgs.append("circle")
     .attr("r", 100)
     .style("fill", "blue");
 
-d3.csv("points.csv").then(function(data)
+d3.csv("https://raw.githubusercontent.com/IuricichF/svg-and-d3-basics-ss/main/points.csv?token=ASU4ROOPQVX7WOZFAVNGIKLAP5CCW").then(function(data)
 { 
     data.forEach(function(d) {
         d3.select("svg").append("circle")
