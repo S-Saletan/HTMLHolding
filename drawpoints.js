@@ -1,20 +1,4 @@
-var svgs = d3.select("body").append("svg")
-    .attr("width", 500)
-    .attr("height", 500);
-    
-    
-svgs.append("rect")
-    .attr("width", 500)
-    .attr("height", 500)
-    .style("fill", "red")
-    
-svgs.append("circle")
-    .attr("cx", 250)
-    .attr("cy", 250)
-    .attr("r", 100)
-    .style("fill", "blue");
-
-d3.csv("https://raw.githubusercontent.com/IuricichF/svg-and-d3-basics-ss/main/points.csv?token=ASU4ROOPQVX7WOZFAVNGIKLAP5CCW").then(function(data)
+d3.csv("points.csv").then(function(data)
 { 
     data.forEach(function(d) {
         d3.select("svg").append("circle")
